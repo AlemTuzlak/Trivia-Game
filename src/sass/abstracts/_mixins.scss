@@ -1,0 +1,52 @@
+@mixin scrollbar() {
+  &::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    margin-right: 0.2rem;
+    background-color: $white;
+    display: none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+    margin-right: 0.2rem;
+    background-color: $white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-image: linear-gradient($yellow-main, $yellow-dark);
+  }
+}
+
+@mixin media-phone {
+  @media (max-width: 600px) {
+    @content; }
+}
+
+@mixin media-tablet {
+  @media (max-width: 968px) {
+    @content; }
+}
+
+@mixin media-tablet-portrait {
+  @media (max-width: 1200px) {
+    @content; }
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) { @content; }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 56.25em) { @content; }
+  }
+
+  @if $breakpoint == tablet-l {
+    @media only screen and (max-width: 75em) { @content; }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 112.5em) { @content; }
+  }
+}

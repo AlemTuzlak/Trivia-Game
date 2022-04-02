@@ -1,0 +1,66 @@
+{
+  "name": "quiz",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/node": "^16.11.26",
+    "@types/react": "^17.0.43",
+    "@types/react-dom": "^17.0.14",
+    "axios": "^0.26.1",
+    "node-sass": "^7.0.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-query": "^3.34.19",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.0",
+    "sass": "^1.49.11",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js,.ts,.tsx src/",
+    "lint:fix": "eslint --ext .js,.ts,.tsx src/ --fix"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "babel-jest": "^27.5.1",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.29.4",
+    "ts-jest": "^27.1.4"
+  }
+}

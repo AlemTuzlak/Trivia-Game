@@ -1,0 +1,110 @@
+@import "../../sass/abstracts/variables";
+
+.progress-bar {
+  width: 100%;
+  border-radius: 5rem;
+  background-color: $white;
+  box-shadow: 0.3rem 0.3rem 1.5rem rgba($dark-blue, 0.1);
+  padding: 0.5rem;
+
+  &--dark {
+    background-color: $darkLight;
+    box-shadow: 0 0 0.5rem rgba($white, 0.1);
+  }
+
+  &--large {
+    height: 4rem;
+  }
+
+  &--medium {
+    height: 2rem;
+  }
+
+  &--small {
+    height: 1rem;
+    padding: 0;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba($dark-blue, 0.1);
+  }
+
+
+  &__main {
+    border-radius: 5rem;
+    min-width: 4%;
+    height: 100%;
+    position: relative;
+    transition: width 2s ease;
+    animation: progress-bar-stripes 4s linear infinite;
+    background-image: linear-gradient(45deg, rgba($dark-gray, 0.15) 25%, transparent 25%, transparent 50%, rgba($dark-gray, 0.15) 50%, rgba($dark-gray, 0.15) 75%, transparent 75%, transparent);
+		max-width: 100%;
+    &--green {
+      background-color: $green;
+    }
+
+
+    &--large {
+      background-size: 8rem 8rem;
+    }
+
+    &--medium {
+      background-size: 4rem 4rem;
+    }
+
+    &--small {
+      background-size: 2rem 2rem;
+    }
+
+    &__tracker {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+      background-color: $white;
+      transform: translateY(-15%);
+      box-shadow: 0.3rem 0.3rem 1.5rem rgba($dark-blue, 0.3);
+			
+      &--dark {
+        background-color: $darkLight;
+        box-shadow: -0.2rem 0 0.6rem rgba($white, 0.3);
+      }
+
+      &--large {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+
+      &--medium {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      &--small {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    &__progress {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-family: Mont;
+			
+      &--large {
+        font-size: 2.4rem;
+				transform: translate(0%, -110%);
+      }
+
+      &--medium {
+        font-size: 2rem;
+        transform: translate(22%, 140%);
+      }
+
+      &--small {
+        font-size: 1.6rem;
+        transform: translate(30%, 140%);
+      }
+    }
+  }
+}

@@ -1,18 +1,15 @@
 import React, { FC } from "react";
 import Button from "../../../components/Button/Button";
-import ProgressBar from "../../../components/ProgressBar/ProgressBar";
 import { decodeHtml } from "../../../helpers/decodeHtml";
 import { Question, Answer } from "../../../types";
 
 interface SingleQuestionProps {
   currentQuestion: Question;
-  question: number;
   handleAnswerClick: (answer: Answer) => void;
 }
 
 const SingleQuestion: FC<SingleQuestionProps> = ({
   currentQuestion,
-  question,
   handleAnswerClick,
 }) => {
   return (
@@ -36,12 +33,6 @@ const SingleQuestion: FC<SingleQuestionProps> = ({
           text="True"
         />
       </div>
-      <ProgressBar
-        className="bottom"
-        progressString={`${question}/10`}
-        width={question * 10}
-        size="large"
-      />
     </>
   );
 };

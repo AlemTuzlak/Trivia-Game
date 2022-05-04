@@ -6,6 +6,7 @@ import { FinalResults } from "./FinalResults";
 import { Answer } from "../../types";
 import { SingleQuestion } from "./SingleQuestion";
 import { useNavigate } from "react-router-dom";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 const Quiz = () => {
   const navigation = useNavigate();
@@ -49,11 +50,18 @@ const Quiz = () => {
           ) : (
             <>
               {quizOngoing ? (
-                <SingleQuestion
-                  question={question}
-                  currentQuestion={currentQuestion}
-                  handleAnswerClick={handleAnswerClick}
-                />
+                <>
+                  <SingleQuestion
+                    currentQuestion={currentQuestion}
+                    handleAnswerClick={handleAnswerClick}
+                  />
+                  <ProgressBar
+                    className="bottom"
+                    progressString={`${question}/10`}
+                    width={question * 10}
+                    size="large"
+                  />
+                </>
               ) : (
                 <FinalResults
                   playAgain={playAgain}
